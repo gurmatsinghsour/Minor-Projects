@@ -19,5 +19,6 @@ It's basically a game where a user will have to guess a random number from 1~10.
 # Password testing
 This project was coded to check whether the password is correct or not.
 
-#Translator
+# Translator
+
 The translator program will translate a ".txt" file into whatever language added inside the program and once it's converted it's gonna save the translated text file in the same directory. 
