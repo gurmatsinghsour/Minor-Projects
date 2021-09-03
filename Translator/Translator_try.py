@@ -16,92 +16,64 @@ print('''
 	1. English
 	2. Japan
 	3. Korean
-	4. PT
-	5. Zh
-	6. Zh-TW
+	4. Portuguese
+	5. Chinese
 	7. Exit\n''')
 
-loop = True
 
-while loop == True:	
 	
-	lang = int(input("Select the language that you want to input from the selected options: "))
+lang = int(input("Select the language that you want to input from the selected options: "))
 
-	if lang == 1:
-		translator = Translator(to_lang="en")
-		translated = translator.translate(new_text)
-		print(translated)
-		print("*\n"*8)
-		with open("translated.txt",mode = 'w') as translatedtext:
-			mynewtranslatedtext = translatedtext.write(translated)
+if lang == 1:
+	translator = Translator(to_lang="en")
+	translated = translator.translate(new_text)
+	print("\n",translated,"\n")
+	print("*"*90)
+	print(" ")
+	with open("translated.txt",mode = 'w') as my_file:
+		my_file.write(translated)
 
-		
+elif lang == 2:
+	translator = Translator(to_lang="ja")
+	translated = translator.translate(new_text)
+	print("\n",translated,"\n")
+	print("*"*90)
+	print(" ")
+	with open("translated.txt",mode = 'w') as my_file:
+		my_file.write(translated)
 
+elif lang == 3:
+	translator = Translator(to_lang="ko")
+	translated = translator.translate(new_text)
+	print("\n",translated,"\n")
+	print("*"*90)
+	print(" ")
+	with open("translated.txt",mode = 'w') as my_file:
+		my_file.write(translated)
 
-	elif lang == 2:
-		translator = Translator(to_lang="ja")
-		translated = translator.translate(new_text)
-		print(translated)
-		print("*\n"*8)		
-		with open("translated.txt",mode = 'w') as translatedtext:
-			mynewtranslatedtext = translatedtext.write(translated)
+elif lang == 4:
+	translator = Translator(to_lang="pt")
+	translated = translator.translate(new_text)
+	print("\n",translated,"\n")
+	print("*"*90)
+	print(" ")
+	with open("translated.txt",mode = 'w') as my_file:
+		my_file.write(translated)
 
-        
+elif lang == 5:
+	translator = Translator(to_lang="zh")
+	translated = translator.translate(new_text)
+	print("\n",translated,"\n")
+	print("*"*90)
+	print(" ")
+	with open("translated.txt",mode = 'w') as my_file:
+		my_file.write(translated)
 
-	elif lang == 3:
-		translator = Translator(to_lang="ko")
-		translated = translator.translate(new_text)
-		print(translated)
-		print("*\n"*8)
-		with open("translated.txt",mode = 'w') as translatedtext:
-			mynewtranslatedtext = translatedtext.write(translated)
-		
-		
-	
+elif lang == 0:
+	print("Hey, don't type 0.")
 
-	elif lang == 4:
-		translator = Translator(to_lang="pt")
-		translated = translator.translate(new_text)
-		print(translated)
-		print("*\n"*8)
-		with open("translated.txt",mode = 'w') as translatedtext:
-			mynewtranslatedtext = translatedtext.write(translated)	
-       	
-       	
+elif lang == 7:
+	exit()
 
-
-	elif lang == 5:
-		translator = Translator(to_lang="zh")
-		translated = translator.translate(new_text)
-		print(translated)
-		print("\n************************\n"*8)
-		with open("translated.txt",mode = 'w') as translatedtext:
-			mynewtranslatedtext = translatedtext.write(translated)
-       	
-
-
-	elif lang == 6:
-		translator = Translator(to_lang="zh")
-		translated = translator.translate(new_text)
-		print(translated)
-		print("*\n"*8)
-		with open("translated.txt",mode = 'w') as translatedtext:
-			mynewtranslatedtext = translatedtext.write(translated)
-		
-
-
-	elif lang == 0:
-		print("Hey, Don't type 0 DUMBO")
-
-	elif lang == 7:
-		loop = False
-		
-
-
-
-
-
-
-
-
-
+else:
+	print("Invalid Syntax.")
