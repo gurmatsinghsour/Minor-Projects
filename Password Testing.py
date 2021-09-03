@@ -42,4 +42,7 @@ while True:
                
 
     except ValueError:
-        print("Please enter a valid value")
+        print("Please enter a valid value.")
+
+    except TypeError:
+        print("Please enter a valid value.")   
