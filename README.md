@@ -9,7 +9,7 @@ It's an organized and systematic office solutoin for the university. it provides
 4) Delete - This function delets the record of a particular student.
 5) Update - This method updates the information of the student in the student management system.
 
-This program was written in VScode and it's mainly coded on the "def" function in which we have used if-else, while loop and the dictionary.
+This program was mainly coded on the "def" function in which we have used if-else, while loop and the dictionary.
 
 
 # Game
