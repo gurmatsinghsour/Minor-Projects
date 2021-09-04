@@ -30,5 +30,6 @@ It's a game created with if-else statement logic.
 I used the random module and instantiated it to a variable such that that variable will be randomly given out of the three choices, i.e, "r", "p" and "s".
 Program will first ask the user to enter it's choice and if it matches with the user (if 'r' == 'r' and etc) it's gonna print as 'Tie' with a bit of customization. If user picks something like 'r', having the the random module giving 's' to the variable that i've declared then it's gonna print as "You've won" with, like again, customization. So this is how the logic works. Make sure you maximize the output tab to enjoy the custom GUI 
 
-PS :- The IDE used to code the above program was VScode.
+
+The Tools used:- Sublime text, VSCode
 
