@@ -24,7 +24,7 @@ if a user inputted a wrong password he'll have 3 tries to attempt the password a
 A translator program. So basically I've used an external library or module named "Translated" which reads a file, it can be a 'txt' file, 'pdf' etc. once it reads then it's gonna ask the user what language does it wants to print, the available languages are, 1). English, 2). Japanese, 3). Chinese, 4). Portuguese.
 once you've selected the language that you want the file to translate into then it's gonna print the file and once it is translated, it's gonna make another 'txt' file named 'translated.txt' in the same directory.
 
-#Rock paper scissor
+# Rock paper scissor
 
 It's a game created with if-else statement logic.
 I used the random module and instantiated it to a variable such that that variable will be randomly given out of the three choices, i.e, "r", "p" and "s".
