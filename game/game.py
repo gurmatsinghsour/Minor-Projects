@@ -11,6 +11,7 @@ while True:
         user_num = int(input("Guess the random no.: "))
         if user_num == randomnum:
             print("Congratulation, you've won!")
+            exit()
 
         else:
             print("Incorrect guess! Try again.")
