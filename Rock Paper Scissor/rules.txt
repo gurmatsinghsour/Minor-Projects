@@ -1,3 +1,3 @@
-               The rule is simple and easy. let's say rock crushes scissors (no need to actually crush). If one player picks
-               scissors and the other paper, the player who showed scissors succeeds. Scissors cuts paper. If a player shows
-                              paper while the other shows rock, the player who picked paper succeeds.
+                The rule is simple and easy. let's say rock crushes scissors (no need to actually crush). If one user picks
+               scissors and the AI stores paper, the user who picked scissors succeeds. Scissors cuts paper. If a user shows
+                              paper while the AI stored with rock, the user who picked paper succeeds.
