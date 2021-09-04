@@ -22,9 +22,10 @@ lost ='''\n\n
         \n\n''' 
 
 def rules():
-    with open('rules.txt', mode='r') as text:
-         rules = text.read()
-    print('''
+    try:
+        with open('rules.txt', mode='r') as text:
+             rules = text.read()
+             print(f'''
 
                                                     ______  _     _       ______  _____ 
                                                     |  __ \| |  | | |    |  ____|/ ____|
@@ -33,11 +34,15 @@ def rules():
                                                     | | \ \| |__| | |____| |____ ____) |
                                                     |_|  \_\\____/|______|______|_____/ 
 
-｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡''',"\n")     
-    print(rules)
-    print('''
+｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡    
+{rules}
 ｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡''',"\n"*3)    
     
+    except FileNotFoundError as error:
+        print("File not found", error)
+
+    except IOError as error:
+        print(error)
 
 
     
@@ -71,7 +76,16 @@ def play():
         \n\n''' 
 
 
+
+
     return lost
+
+
+# def is_win(player, opponent):
+#     if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
+#         or (player == 'p' and opponent == 'r'):
+#         return True
+
 
 
 
@@ -79,26 +93,29 @@ def play():
 def main():
     loop = True
     while loop:
-        num = int(input("'1' --> if you want to start the game \n'2' --> if you want to exit the game : "))
-        if num == 1:
-            rules()
-            print(play())
+        try:
+             num = int(input("'1' --> if you want to start the game \n'2' --> if you want to exit the game : "))
+             if num == 1:
+                 rules()
+                 print(play())
 
-        elif num == 2:
-            print('''
 
+             elif num == 2:
+                 pass
+                 print('''
+                 
 Everybody hates me - The Chainsmokers
 0:35 ━❍──────── -5:32
 ↻     ⊲  Ⅱ  ⊳     ↺
 VOLUME: ▁▂▃▄▅▆▇ 100%
-            
-            ''')  
-            exit()
 
-        else:
-            print("Invalid Syntax")       
+                 ''')
+
+                 exit()
+
             
-                
+        except ValueError as error:
+            print("Invalid Syntax")
 
 
 
